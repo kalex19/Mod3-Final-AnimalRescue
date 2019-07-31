@@ -36,7 +36,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Description
 
-
+  The goal of this final project was to test the cummulative knowledge of the developer. The dev was tasked to build an animal rescue app in 3 hours or less using react and redux. Testing was not required. The server was provided.
 
 ## Project Successes
 
@@ -49,7 +49,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Project Extensions/Issues
 
-* 
+* Finish testing all async functioanlity
+* Seperate animals and donations into thier own components
 
 
 ## Project Tech Emphasis
@@ -72,42 +73,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### Home Page
 
 ![Home Page](./src/images/HomePage.png)
-
-### Search
-
-![Search](./src/images/SearchPage.png)
-
-### Genres
-
-![Genres](./src/images/GenrePage.png)
-
-### Genre Page
-
-![Genres](./src/images/GenreSpecificPage.png)
-
-### Movie Card
-
-![Movie Card](./src/images/MovieCardPage.png)
-
-### Favorites
-
-![Favorites](./src/images/FavoritesPages.png)
-
-### Favorites Error
-
-![Favorites Error](./src/images/FavoriteError.png)
-
-### Sign In
-
-![Sign In](./src/images/SignUpPage.png)
-
-### Create Account
-
-![Create Account](./src/images/CreateAccount.png)
-
-### 404 Page
-
-![404 Page](./src/images/404Page.png)
 
 
 ## Developer
