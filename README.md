@@ -40,12 +40,12 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Project Successes
 
+ This project was straight forward and easy to make, however, there is always room to refactor. 
 
 
 ## Project Challenges
 
-
-
+The app has working tests, however not all tests are passing.
 
 ## Project Extensions/Issues
 
@@ -70,9 +70,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Project Comps:
 
-### Home Page
-
-![Home Page](./src/images/HomePage.png)
+N/A
 
 
 ## Developer
