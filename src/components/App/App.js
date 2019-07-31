@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
-import {getAnimals, getDonations, hasError} from '../../actions';
+import {getAnimals, getDonations, hasError, isLoading} from '../../actions';
 import {fetchData} from '../../util/apicalls';
 
 export class App extends Component {
 
   async componentDidMount(){
     await this.fetchAnimals()
+    await this.fetchDonations()
   }
 
   fetchAnimals = async () => {
@@ -17,6 +18,21 @@ export class App extends Component {
         const results = await fetchData(url);
         console.log(results)
         this.props.getAnimals(results)
+        this.props.hasError('')
+      } catch(error){
+        this.props.hasError(error.message)
+      }
+    }
+  }
+
+  fetchDonations = async () => {
+    if(!this.props.donations.length){
+      try{
+        const url = 'http://localhost:3001/api/v1/donations';
+        const results = await fetchData(url);
+        console.log(results)
+        this.props.getDonations(results)
+        this.props.hasError('')
       } catch(error){
         this.props.hasError(error.message)
       }
@@ -49,7 +65,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = dispatch => ({
   getAnimals: animals => dispatch(getAnimals(animals)),
   getDonations: donations => dispatch(getDonations(donations)),
-  hasError: error => dispatch(hasError(error))
+  hasError: error => dispatch(hasError(error)),
+  isLoading: loading => dispatch(isLoading(loading))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
