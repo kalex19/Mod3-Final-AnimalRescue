@@ -1,0 +1,14 @@
+
+.donationForm {
+  font-size: 2em;
+  width: 80%;
+  text-align: center;
+}
+
+.label {
+  margin: 0 2%;
+}
+
+.submit-btn{
+  margin: 2%;
+}

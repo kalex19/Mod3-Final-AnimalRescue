@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {getAnimals, getDonations, hasError, isLoading} from '../../actions';
 import {fetchData} from '../../util/apicalls';
 import DonationForm from '../DonationForm/DonationForm';
+import './App.css';
 
 export class App extends Component {
 
@@ -63,8 +64,8 @@ export class App extends Component {
 
     const animals = this.props.animals.map(animal => {
       return (
-        <article>
-          <img src={animal.img} alt="animal"/>
+        <article className="animalCard">
+          <img src={animal.img} alt="animal" className="animalImage"/>
           <p>{animal.name}</p>
           <p>{animal.species}</p>
           <p>{animal.description}</p>

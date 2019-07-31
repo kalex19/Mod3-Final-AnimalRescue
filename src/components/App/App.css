@@ -1,18 +1,32 @@
 .App {
   text-align: center;
-  margin: 5%;
+  margin: 2%;
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-rows: 25% 80%;
 }
 
 .loading {
   margin: 5% 20%;
   font-size: 2em;
-  color: green;
+  color: black;
+}
+
+.animalCard {
+  display: block;
+  width: 500px;
+  margin: 2%;
+}
+
+.animalImage{
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .donationContainer{
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: olivedrab
 }
 
 .donationCard{

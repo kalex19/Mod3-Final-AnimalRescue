@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {addDonation} from '../../actions';
+import './DonationForm.css';
 
 export class DonationForm extends Component {
   constructor() {
@@ -39,12 +40,14 @@ clearInputs = () => {
 
   render() {
     return (
-      <div>
+      <div className="donationForm">
         <h2>Donate!</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} >
+        <label className="label" for="name">Name</label>
           <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
+          <label className="label"  for="donation">Donation Amount</label>
           <input  type="text" name="donation" value={this.state.donation} onChange={this.handleChange}/>
-          <input type="submit" placeholder="Donate!"/>
+          <input type="submit" placeholder="Donate!" className="submit-btn"/>
         </form>
       </div>
     )
