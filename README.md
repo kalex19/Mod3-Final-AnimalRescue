@@ -1,6 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Animal Rescue
+
+
+## Table of Contents
+* [Available Scripts](#Available-Scripts)
+* [Description](#Description)
+* [Project Successes](Project-Successes)
+* [Project Challenges](Project-Challenges)
+* [ Project Extensions/Issues](Project-Extensions/Issues)
+* [Project Tech Emphasis](Project-Tech-Emphasis)
+* [Project Comps](Project-Comps)
+* [Developer](Developer)
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
@@ -17,52 +30,90 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Test Coverage
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Test Coverage](./src/images/test-coverage.png)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Description
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project Successes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Project Challenges
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Project Extensions/Issues
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* 
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Project Tech Emphasis
 
-### Making a Progressive Web App
+* HTML
+* CSS
+* JavaScript
+* React
+* Redux
+* Jest
+* Enzyme
+* PropTypes
+* ES6 Classes
+* API fetches
+* NPM
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+## Project Comps:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Home Page
 
-### Deployment
+![Home Page](./src/images/HomePage.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### Search
 
-### `npm run build` fails to minify
+![Search](./src/images/SearchPage.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Genres
+
+![Genres](./src/images/GenrePage.png)
+
+### Genre Page
+
+![Genres](./src/images/GenreSpecificPage.png)
+
+### Movie Card
+
+![Movie Card](./src/images/MovieCardPage.png)
+
+### Favorites
+
+![Favorites](./src/images/FavoritesPages.png)
+
+### Favorites Error
+
+![Favorites Error](./src/images/FavoriteError.png)
+
+### Sign In
+
+![Sign In](./src/images/SignUpPage.png)
+
+### Create Account
+
+![Create Account](./src/images/CreateAccount.png)
+
+### 404 Page
+
+![404 Page](./src/images/404Page.png)
+
+
+## Developer
+
+[Katherine Lewis](https://github.com/kalex19)
+
+## Licensing
+
+All credit goes to <a href="turing.io">Turing School of Software</a> for providing the project specifications.
