@@ -15,7 +15,7 @@ export class App extends Component {
       try{
         const url = 'http://localhost:3001/api/v1/rescue-animals';
         const results = await fetchData(url);
-        console.log(resutls)
+        console.log(results)
         this.props.getAnimals(results)
       } catch(error){
         this.props.hasError(error.message)
