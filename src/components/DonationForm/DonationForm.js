@@ -19,7 +19,7 @@ handleSubmit = (e) => {
     id: this.props.donations.length + 1
   }
   this.props.addDonation(donation)
-  this.props.postDonation()
+  // this.props.postDonation(donation)
   this.clearInputs()
 }
 

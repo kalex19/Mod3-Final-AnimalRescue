@@ -47,23 +47,24 @@ export class App extends Component {
     }
   }
 
-  postDonations = async () => {
-      try{
-        const url = 'http://localhost:3001/api/v1/donations';
-        const results = await fetchData(url);
-        console.log(results)
-        this.props.isLoading(true)
-        this.props.getDonations(results)
-        this.props.hasError('')
-        this.props.isLoading(false)
-      } catch(error){
-        this.props.hasError(error.message)
-      }
-    }
-  }
-
-
-  render() {
+  // postDonations = async (donation) => {
+  //     try{
+  //       const url = 'http://localhost:3001/api/v1/donations';
+  //       const options = {
+  //         method: 'POST',
+  //         headers: {'Content-Type': 'application/json'},
+  //         body: JSON.stringify({
+  //           ...donation
+  //         })
+  //       }
+  //       const results = await fetchData(url, options);
+  //       return results
+  //     } catch(error){
+  //       this.props.hasError(error.message)
+  //     }
+  //   }
+  
+  render(){
 
     const animals = this.props.animals.map(animal => {
       return (
@@ -112,5 +113,9 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 App.propTypes = {
   animals: PropTypes.array,
   donations: PropTypes.array,
+  getAnimals: PropTypes.func,
+  getDonations: PropTypes.func,
+  hasError: PropTypes.func,
+  isLoading: PropTypes.func,
 }
 
