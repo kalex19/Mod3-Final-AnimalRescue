@@ -15,11 +15,11 @@ export class DonationForm extends Component {
 handleSubmit = (e) => {
   e.preventDefault()
   const donation = {
-    ...this.state,
-    id: this.props.donations.length + 1
+    id: this.props.donations.length + 1,
+    ...this.state
   }
   this.props.addDonation(donation)
-  // this.props.postDonation(donation)
+  this.props.postDonation(donation)
   this.clearInputs()
 }
 

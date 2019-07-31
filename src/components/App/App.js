@@ -3,10 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import {getAnimals, getDonations, hasError, isLoading} from '../../actions';
 import {fetchData} from '../../util/apicalls';
-import {DonationForm} from '../DonationForm/DonationForm';
-// import {AnimalCards} from '../AnimalCards/AnimalCards';
-// import { Donations } from '../Donations/Donations';
-
+import DonationForm from '../DonationForm/DonationForm';
 
 export class App extends Component {
 
@@ -20,7 +17,6 @@ export class App extends Component {
       try{
         const url = 'http://localhost:3001/api/v1/rescue-animals';
         const results = await fetchData(url);
-        console.log(results)
         this.props.isLoading(true)
         this.props.getAnimals(results)
         this.props.hasError('')
@@ -36,7 +32,6 @@ export class App extends Component {
       try{
         const url = 'http://localhost:3001/api/v1/donations';
         const results = await fetchData(url);
-        console.log(results)
         this.props.isLoading(true)
         this.props.getDonations(results)
         this.props.hasError('')
@@ -47,22 +42,22 @@ export class App extends Component {
     }
   }
 
-  // postDonations = async (donation) => {
-  //     try{
-  //       const url = 'http://localhost:3001/api/v1/donations';
-  //       const options = {
-  //         method: 'POST',
-  //         headers: {'Content-Type': 'application/json'},
-  //         body: JSON.stringify({
-  //           ...donation
-  //         })
-  //       }
-  //       const results = await fetchData(url, options);
-  //       return results
-  //     } catch(error){
-  //       this.props.hasError(error.message)
-  //     }
-  //   }
+  postDonation = async (donation) => {
+      try{
+        const url = 'http://localhost:3001/api/v1/donations';
+        const options = {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            ...donation
+          })
+        }
+        const results = await fetchData(url, options);
+        return results
+      } catch(error){
+        this.props.hasError(error.message)
+      }
+    }
   
   render(){
 
@@ -79,29 +74,31 @@ export class App extends Component {
 
     const donations = this.props.donations.map(donation => {
       return (
-        <article>
-          <p>{donation.name}</p>
-          <p>{donation.donation}</p>
+        <article className="donationCard">
+          <p>{donation.name.toUpperCase()}</p>
+          <p>${donation.donation}</p>
         </article>
       )
     });
 
     return (
-      <div>
+      <div className="App">
+      <div className="donationContainer">
         <DonationForm postDonation={this.postDonation} donations={this.props.donations}/>
-        {/* {this.props.isLoading === true && <p>Loading...</p>}
-        {this.props.isLoading === false && <section>{donations}</section>} */}
+        {!this.props.isLoading && <p className="loading">Loading...</p>}
+        <h2>Amazing Benfactors:</h2>
         {donations}
+        </div>
         {animals}
       </div>
     )}};
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   animals: state.animals,
   donations: state.donations
 })
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   getAnimals: animals => dispatch(getAnimals(animals)),
   getDonations: donations => dispatch(getDonations(donations)),
   hasError: error => dispatch(hasError(error)),
