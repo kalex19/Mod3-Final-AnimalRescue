@@ -1,9 +1,34 @@
-getAnimals
+export const getAnimals = (animals) => ({
+  type: 'GET_ANIMALS',
+  payload: {
+    animals
+  }
+})
 
-getDonations
+export const getDonations = (donations) => ({
+  type: 'GET_DONATIONS',
+  payload: {
+    donations
+  }
+})
 
-addDonations
+export const addDonation = (donation) => ({
+  type: 'ADD_DONATION',
+  payload: {
+    donation
+  }
+})
 
-isLoading
+export const isLoading = (loading) => ({
+  type: 'IS_LOADING',
+  payload: {
+    loading
+  }
+})
 
-hasError
+export const hasError = (error) => ({
+  type: ' HAS_ERROR',
+  payload: {
+    error
+  }
+})
