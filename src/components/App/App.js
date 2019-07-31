@@ -47,6 +47,21 @@ export class App extends Component {
     }
   }
 
+  postDonations = async () => {
+      try{
+        const url = 'http://localhost:3001/api/v1/donations';
+        const results = await fetchData(url);
+        console.log(results)
+        this.props.isLoading(true)
+        this.props.getDonations(results)
+        this.props.hasError('')
+        this.props.isLoading(false)
+      } catch(error){
+        this.props.hasError(error.message)
+      }
+    }
+  }
+
 
   render() {
 
@@ -72,7 +87,7 @@ export class App extends Component {
 
     return (
       <div>
-        <DonationForm/>
+        <DonationForm postDonation={this.postDonation} donations={this.props.donations}/>
         {/* {this.props.isLoading === true && <p>Loading...</p>}
         {this.props.isLoading === false && <section>{donations}</section>} */}
         {donations}
