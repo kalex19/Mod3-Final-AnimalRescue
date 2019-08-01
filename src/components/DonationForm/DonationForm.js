@@ -40,12 +40,12 @@ clearInputs = () => {
 
   render() {
     return (
-      <div className="donationForm">
-        <h2>Donate!</h2>
+      <div className="donation-form">
+      <h2>Donate!</h2>
         <form onSubmit={this.handleSubmit} >
-        <label className="label" for="name">Name</label>
+        <label className="label" for="name">Name:</label>
           <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
-          <label className="label"  for="donation">Donation Amount</label>
+          <label className="label"  for="donation">Donation Amount:</label>
           <input  type="text" name="donation" value={this.state.donation} onChange={this.handleChange}/>
           <input type="submit" placeholder="Donate!" className="submit-btn"/>
         </form>

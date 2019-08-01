@@ -1,14 +1,27 @@
 
-.donationForm {
+.donation-form {
   font-size: 2em;
-  width: 80%;
   text-align: center;
+}
+
+form {
+  display: grid;
+}
+
+input, label {
+  margin: 10%;
 }
 
 .label {
   margin: 0 2%;
 }
 
-.submit-btn{
-  margin: 2%;
+.submit-btn {
+  margin: 5%;
+  font-size: 1.2em;
+}
+
+.submit-btn:hover {
+  color: white;
+  background-color: darkgray;
 }

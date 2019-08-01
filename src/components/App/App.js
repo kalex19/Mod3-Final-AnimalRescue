@@ -64,10 +64,10 @@ export class App extends Component {
 
     const animals = this.props.animals.map(animal => {
       return (
-        <article className="animalCard">
-          <img src={animal.img} alt="animal" className="animalImage"/>
-          <p>{animal.name}</p>
-          <p>{animal.species}</p>
+        <article className="animal-card">
+          <img src={animal.img} alt="animal" className="animal-image"/>
+          <p className="animal-name">{animal.name}</p>
+          <p><i>{animal.species}</i></p>
           <p>{animal.description}</p>
         </article>
       )
@@ -75,7 +75,7 @@ export class App extends Component {
 
     const donations = this.props.donations.map(donation => {
       return (
-        <article className="donationCard">
+        <article className="donation-card">
           <p>{donation.name.toUpperCase()}</p>
           <p>${donation.donation}</p>
         </article>
@@ -84,19 +84,25 @@ export class App extends Component {
 
     return (
       <div className="App">
-      <div className="donationContainer">
+      <div className="donation-container">
         <DonationForm postDonation={this.postDonation} donations={this.props.donations}/>
-        {!this.props.isLoading && <p className="loading">Loading...</p>}
+        {this.props.loading && <p className="loading">Loading...</p>}
+        <div className="benefactors">
         <h2>Amazing Benfactors:</h2>
         {donations}
         </div>
+        </div>
+        
+        <div className="animal-container">
         {animals}
+        </div>
       </div>
     )}};
 
 export const mapStateToProps = (state) => ({
   animals: state.animals,
-  donations: state.donations
+  donations: state.donations,
+  loading: state.loading
 })
 
 export const mapDispatchToProps = dispatch => ({
@@ -111,6 +117,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 App.propTypes = {
   animals: PropTypes.array,
   donations: PropTypes.array,
+  loading: PropTypes.bool,
   getAnimals: PropTypes.func,
   getDonations: PropTypes.func,
   hasError: PropTypes.func,

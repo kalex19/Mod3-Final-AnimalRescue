@@ -1,8 +1,6 @@
 .App {
   text-align: center;
   margin: 2%;
-  display: grid;
-  grid-template-rows: 25% 80%;
 }
 
 .loading {
@@ -11,26 +9,40 @@
   color: black;
 }
 
-.animalCard {
-  display: block;
-  width: 500px;
-  margin: 2%;
-}
-
-.animalImage{
-  max-width: 200px;
-  max-height: 200px;
-}
-
-.donationContainer{
+.donation-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   background-color: olivedrab
 }
 
-.donationCard{
+.donation-card {
   display: block;
+  background-color:  white;
+}
+
+.animal-container {
+  display: grid;
+  margin-top: 30px;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.animal-card {
+  display: block;
+  padding: 15px;
+  border: black 3px solid;
+  font-size: 1.2em;
+  background-color: white;
+}
+
+.animal-image {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.animal-name {
+  font-weight: bold;
 }
 
 
