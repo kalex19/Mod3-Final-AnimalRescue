@@ -70,7 +70,7 @@ The app has working tests, however not all tests are passing.
 
 ## Project Comps:
 
-N/A
+![Home Page](./src/assets/home-page.png)
 
 
 ## Developer
